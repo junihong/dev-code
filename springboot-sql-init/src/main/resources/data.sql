@@ -1,0 +1,21 @@
+INSERT INTO MEMBER(name, email, phone_number, gender, created_date, modified_date) VALUES ('TEST01', 'test01@gmail.com', '000-0000-0001', 'M', NOW(), NOW());
+INSERT INTO MEMBER(name, email, phone_number, gender, created_date, modified_date) VALUES ('TEST02', 'test02@gmail.com', '000-0000-0001', 'M', NOW(), NOW());
+INSERT INTO MEMBER(name, email, phone_number, gender, created_date, modified_date) VALUES ('TEST03', 'test03@gmail.com', '000-0000-0001', 'M', NOW(), NOW());
+INSERT INTO MEMBER(name, email, phone_number, gender, created_date, modified_date) VALUES ('TEST04', 'test04@gmail.com', '000-0000-0001', 'M', NOW(), NOW());
+INSERT INTO MEMBER(name, email, phone_number, gender, created_date, modified_date) VALUES ('TEST05', 'test05@gmail.com', '000-0000-0001', 'M', NOW(), NOW());
+INSERT INTO MEMBER(name, email, phone_number, gender, created_date, modified_date) VALUES ('TEST06', 'test06@gmail.com', '000-0000-0001', 'M', NOW(), NOW());
+INSERT INTO MEMBER(name, email, phone_number, gender, created_date, modified_date) VALUES ('TEST07', 'test07@gmail.com', '000-0000-0001', 'M', NOW(), NOW());
+INSERT INTO MEMBER(name, email, phone_number, gender, created_date, modified_date) VALUES ('TEST08', 'test08@gmail.com', '000-0000-0001', 'M', NOW(), NOW());
+INSERT INTO MEMBER(name, email, phone_number, gender, created_date, modified_date) VALUES ('TEST09', 'test09@gmail.com', '000-0000-0001', 'M', NOW(), NOW());
+INSERT INTO MEMBER(name, email, phone_number, gender, created_date, modified_date) VALUES ('TEST10', 'test10@gmail.com', '000-0000-0001', 'M', NOW(), NOW());
+
+INSERT INTO PRODUCT(name, category, price, created_date, modified_date) VALUES ('PRODUCT01', 'CATEGORY01', 10000, NOW(), NOW());
+INSERT INTO PRODUCT(name, category, price, created_date, modified_date) VALUES ('PRODUCT02', 'CATEGORY02', 20000, NOW(), NOW());
+INSERT INTO PRODUCT(name, category, price, created_date, modified_date) VALUES ('PRODUCT03', 'CATEGORY03', 30000, NOW(), NOW());
+INSERT INTO PRODUCT(name, category, price, created_date, modified_date) VALUES ('PRODUCT04', 'CATEGORY04', 40000, NOW(), NOW());
+INSERT INTO PRODUCT(name, category, price, created_date, modified_date) VALUES ('PRODUCT05', 'CATEGORY05', 50000, NOW(), NOW());
+INSERT INTO PRODUCT(name, category, price, created_date, modified_date) VALUES ('PRODUCT06', 'CATEGORY06', 60000, NOW(), NOW());
+INSERT INTO PRODUCT(name, category, price, created_date, modified_date) VALUES ('PRODUCT07', 'CATEGORY07', 70000, NOW(), NOW());
+INSERT INTO PRODUCT(name, category, price, created_date, modified_date) VALUES ('PRODUCT08', 'CATEGORY08', 80000, NOW(), NOW());
+INSERT INTO PRODUCT(name, category, price, created_date, modified_date) VALUES ('PRODUCT09', 'CATEGORY09', 90000, NOW(), NOW());
+INSERT INTO PRODUCT(name, category, price, created_date, modified_date) VALUES ('PRODUCT10', 'CATEGORY10', 10000, NOW(), NOW());
