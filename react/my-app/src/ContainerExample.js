@@ -2,4 +2,14 @@ import {Container} from "react-bootstrap";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function Con
+function ContainerExample() {
+    return (
+        <Container>
+            <Row>
+                <Col>1 of 1</Col>
+            </Row>
+        </Container>
+    );
+}
+
+export default ContainerExample;
