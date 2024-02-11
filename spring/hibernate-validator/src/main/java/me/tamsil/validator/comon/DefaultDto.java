@@ -1,4 +1,4 @@
-package me.tamsil.springboothibernatevalidation;
+package me.tamsil.validator.comon;
 
 public interface DefaultDto<T> {
 

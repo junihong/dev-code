@@ -1,4 +1,4 @@
-package me.tamsil.springboothibernatevalidation;
+package me.tamsil.validator.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

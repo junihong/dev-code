@@ -1,4 +1,4 @@
-package me.tamsil.springboothibernatevalidation;
+package me.tamsil.validator.web;
 
 public record EmployeeResponseDto(
         long id,

@@ -1,4 +1,4 @@
-package me.tamsil.springboothibernatevalidation;
+package me.tamsil.validator.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,24 +18,18 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotBlank(message = "Name is mandatory")
     private String name;
-
-    @NotBlank(message = "Email is mandatory")
     private String email;
-
-    @NotBlank(message = "PhoneNumber is mandatory")
     private String phoneNumber;
-
     private int age;
     private String gender;
     private String grade;
     private String address;
 
     @Builder
-    public Employee(String name, String phoneNumber, int age, String gender, String grade, String address) {
+    public Employee(String name, String email, String phoneNumber, int age, String gender, String grade, String address) {
         this.name = name;
+        this.email = email;
         this.phoneNumber = phoneNumber;
         this.age = age;
         this.gender = gender;

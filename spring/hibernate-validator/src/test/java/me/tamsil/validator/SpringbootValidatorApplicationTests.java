@@ -1,10 +1,10 @@
-package me.tamsil.springboothibernatevalidation;
+package me.tamsil.validator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootHibernateValidationApplicationTests {
+class SpringbootValidatorApplicationTests {
 
 	@Test
 	void contextLoads() {
