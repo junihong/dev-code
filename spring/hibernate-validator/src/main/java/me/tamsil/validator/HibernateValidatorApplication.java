@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class SpringbootValidatorApplication {
+public class HibernateValidatorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootValidatorApplication.class, args);
+		SpringApplication.run(HibernateValidatorApplication.class, args);
 	}
 
 	@Bean
