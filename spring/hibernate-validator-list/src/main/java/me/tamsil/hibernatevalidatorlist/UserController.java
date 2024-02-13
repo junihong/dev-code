@@ -24,7 +24,11 @@ public class UserController {
     }
 
     @PostMapping("/addAll")
-    public ResponseEntity<?> addAll(@RequestBody @NotEmpty(message = "Input user cannot be empty.")List<@Valid UserDto> userDtoList) {
+    public ResponseEntity<?> addAll(
+            @RequestBody
+            @NotEmpty(message = "Input user cannot be empty.")
+            @MaxSizeConstraint
+            List<@Valid UserDto> userDtoList) {
         List<User> resultList = userService.createAll(userDtoList);
         return new ResponseEntity<>(resultList, HttpStatus.OK);
     }
