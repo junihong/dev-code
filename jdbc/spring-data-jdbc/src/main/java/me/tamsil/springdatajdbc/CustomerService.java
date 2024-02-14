@@ -2,9 +2,11 @@ package me.tamsil.springdatajdbc;
 
 import org.springframework.stereotype.Service;
 
+import java.lang.invoke.CallSite;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CustomerService {
@@ -36,6 +38,27 @@ public class CustomerService {
                 customer.getId(), customer.getName(), customer.getAge(),
                 customer.getPhoneNumber(), customer.getEmail(), customer.getAddress()
         );
+    }
+
+    public List<CustomerResponseDto> findByName(String name) {
+        List<Customers> customerList = customerRepository.findByName(name);
+        List<CustomerResponseDto> customerResponseDtoList = customerList.stream()
+                .map(customers -> {
+                    return new CustomerResponseDto(
+                            customers.getId(),
+                            customers.getName(),
+                            customers.getAge(),
+                            customers.getPhoneNumber(),
+                            customers.getEmail(),
+                            customers.getAddress()
+                    );
+                })
+                .collect(Collectors.toList());
+        return customerResponseDtoList;
+    }
+
+    public boolean updateByName(Long id, String name) {
+        return customerRepository.updateByName(id, name);
     }
 
     public List<CustomerResponseDto> findAll() {

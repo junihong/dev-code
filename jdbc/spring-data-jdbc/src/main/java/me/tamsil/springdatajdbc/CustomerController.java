@@ -39,4 +39,16 @@ public class CustomerController {
         customerService.delete(id);
         return new ResponseEntity<>("", HttpStatus.OK);
     }
+
+    @GetMapping("/findByName")
+    public ResponseEntity<? extends List<CustomerResponseDto>> findByName(@RequestParam String name) {
+        List<CustomerResponseDto> resultList = customerService.findByName(name);
+        return new ResponseEntity<>(resultList, HttpStatus.OK);
+    }
+
+    @PostMapping("/update/name")
+    public ResponseEntity<? extends Boolean> updateByName(@RequestParam Long id, @RequestParam String name) {
+        boolean result = customerService.updateByName(id, name);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
 }
