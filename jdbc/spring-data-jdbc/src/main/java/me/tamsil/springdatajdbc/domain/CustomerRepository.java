@@ -1,4 +1,4 @@
-package me.tamsil.springdatajdbc;
+package me.tamsil.springdatajdbc.domain;
 
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
@@ -13,6 +13,8 @@ public interface CustomerRepository extends CrudRepository<Customers, Long> {
     List<Customers> findByName(String name);
 
     List<Customers> findByAddress(String address);
+
+    List<Customers> findByNameAndEmail(String name, String email);
 
     @Modifying
     @Query("UPDATE customers SET name = :name WHERE id = :id")

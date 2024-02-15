@@ -1,5 +1,6 @@
-package me.tamsil.springdatajdbc;
+package me.tamsil.springdatajdbc.web;
 
+import me.tamsil.springdatajdbc.domain.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

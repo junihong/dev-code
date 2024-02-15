@@ -1,7 +1,6 @@
-package me.tamsil.springdatajdbc;
+package me.tamsil.springdatajdbc.web;
 
-public record CustomerResponseDto(
-        Long id,
+public record CustomerRequestDto(
         String name,
         int age,
         String phoneNumber,

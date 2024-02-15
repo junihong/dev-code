@@ -1,8 +1,9 @@
-package me.tamsil.springdatajdbc;
+package me.tamsil.springdatajdbc.domain;
 
+import me.tamsil.springdatajdbc.web.CustomerRequestDto;
+import me.tamsil.springdatajdbc.web.CustomerResponseDto;
 import org.springframework.stereotype.Service;
 
-import java.lang.invoke.CallSite;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -55,6 +56,19 @@ public class CustomerService {
                 })
                 .collect(Collectors.toList());
         return customerResponseDtoList;
+    }
+
+    public List<CustomerResponseDto> findByNameAndEmail(String name, String email) {
+        List<Customers> customersList = customerRepository.findByNameAndEmail(name, email);
+        return customersList.stream()
+                .map(customers -> new CustomerResponseDto(
+                        customers.getId(),
+                        customers.getName(),
+                        customers.getAge(),
+                        customers.getPhoneNumber(),
+                        customers.getEmail(),
+                        customers.getAddress()
+                )).collect(Collectors.toList());
     }
 
     public boolean updateByName(Long id, String name) {

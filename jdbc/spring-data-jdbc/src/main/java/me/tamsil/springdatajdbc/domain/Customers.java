@@ -1,4 +1,4 @@
-package me.tamsil.springdatajdbc;
+package me.tamsil.springdatajdbc.domain;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
