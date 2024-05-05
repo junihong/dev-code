@@ -32,6 +32,7 @@ import org.springframework.security.oauth2.server.authorization.config.annotatio
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer;
 import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
 import org.springframework.security.oauth2.server.authorization.settings.ClientSettings;
+import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
@@ -102,7 +103,9 @@ public class SecurityConfig {
                     .scope(OidcScopes.OPENID)
                     .scope(OidcScopes.PROFILE)
                     .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())
+                    .tokenSettings(TokenSettings.builder().build())
                     .build();
+
             registeredClientRepository.save(oidcClient);
         }
         return registeredClientRepository;
